@@ -1,11 +1,8 @@
 import { program } from "commander";
-import { downloadVideo } from "./services/downloadVideo.service";
+import { downloadCommand } from "./commands/download.command";
 
 program.version("0.0.1");
 
-program
-	.command("download [url]")
-	.description("Download a YT video")
-	.action((url: string) => downloadVideo({ url }));
+program.addCommand(downloadCommand);
 
 program.parse(process.argv);
