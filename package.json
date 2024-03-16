@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "yt": "ts-node src/main.ts"
+    "yt": "ts-node src/yt.ts"
   },
   "keywords": [],
   "author": "",
