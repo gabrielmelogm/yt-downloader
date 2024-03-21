@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "yt": "ts-node src/yt.ts"
+    "yt": "tsc && node ./dist/yt.js",
+    "yt:dev": "ts-node src/yt.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
+    "@inquirer/select": "^2.2.0",
     "commander": "^12.0.0",
     "ytdl-core": "^4.11.5",
     "zod": "^3.22.4"

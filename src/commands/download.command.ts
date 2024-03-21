@@ -21,8 +21,6 @@ const downloadCommand = new Command("download")
 	.option("-f, --format [format]", "Out video format")
 	.description("Download a YT video")
 	.action((url: ArgumentProps, options: OptionsProps) => {
-		// console.log(url);
-		// console.log(options);
 		const dataUrl = argumentProps.parse(url);
 		const dataOptions = optionsProps.parse(options);
 
