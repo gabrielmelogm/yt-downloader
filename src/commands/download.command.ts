@@ -25,7 +25,14 @@ const downloadCommand = new Command("download")
 
 		const title = (await getVideoInfo(url)).videoDetails.title;
 
-		downloadVideo({ url: dataUrl, format: dataOptions?.format, title });
+		downloadVideo({
+			url: dataUrl,
+			format: dataOptions?.format,
+			title,
+			options: {
+				filter: "audioandvideo",
+			},
+		});
 	});
 
 export { downloadCommand };
