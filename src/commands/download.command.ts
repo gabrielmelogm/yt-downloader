@@ -8,6 +8,7 @@ const optionsProps = z
 	.object({
 		out: z.string().optional(),
 		format: formatTypes,
+		audio: z.boolean().optional(),
 	})
 	.nullable();
 
@@ -18,6 +19,7 @@ const downloadCommand = new Command("download")
 	.argument("[url]")
 	.option("-o, --out [out]", "Out video path")
 	.option("-f, --format [format]", "Out video format")
+	.option("-a, --audio", "Downloading audio only")
 	.description("Download a YT video")
 	.action(async (url: ArgumentProps, options: OptionsProps) => {
 		const dataUrl = argumentProps.parse(url);
@@ -30,7 +32,7 @@ const downloadCommand = new Command("download")
 			format: dataOptions?.format,
 			title,
 			options: {
-				filter: "audioandvideo",
+				filter: dataOptions?.audio ? "audioonly" : "audioandvideo",
 			},
 		});
 	});
