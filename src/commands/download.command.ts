@@ -1,8 +1,7 @@
-import yt from "ytdl-core";
-
 import { Command } from "commander";
 import { z } from "zod";
 import { downloadVideo, formatTypes } from "../services/downloadVideo.service";
+import { getVideoInfo } from "../services/getVideoInfo.service";
 
 const argumentProps = z.string().url();
 const optionsProps = z
@@ -20,11 +19,13 @@ const downloadCommand = new Command("download")
 	.option("-o, --out [out]", "Out video path")
 	.option("-f, --format [format]", "Out video format")
 	.description("Download a YT video")
-	.action((url: ArgumentProps, options: OptionsProps) => {
+	.action(async (url: ArgumentProps, options: OptionsProps) => {
 		const dataUrl = argumentProps.parse(url);
 		const dataOptions = optionsProps.parse(options);
 
-		downloadVideo({ url: dataUrl, format: dataOptions?.format });
+		const title = (await getVideoInfo(url)).videoDetails.title;
+
+		downloadVideo({ url: dataUrl, format: dataOptions?.format, title });
 	});
 
 export { downloadCommand };

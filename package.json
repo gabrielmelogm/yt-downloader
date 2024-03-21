@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@inquirer/select": "^2.2.0",
+    "cli-spinners": "^2.9.2",
     "commander": "^12.0.0",
     "ytdl-core": "^4.11.5",
     "zod": "^3.22.4"
