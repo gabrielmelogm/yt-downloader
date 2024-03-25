@@ -34,6 +34,7 @@ const downloadCommand = new Command("download")
 			options: {
 				filter: dataOptions?.audio ? "audioonly" : "audioandvideo",
 			},
+			out: dataOptions?.out,
 		});
 	});
 

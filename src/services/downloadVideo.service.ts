@@ -15,16 +15,18 @@ interface IDownloadVideoProps {
 	title: string;
 	format?: FormatTypes;
 	options?: yt.downloadOptions;
+	out?: string;
 }
-
-const outDir = outPath();
 
 export function downloadVideo({
 	url,
 	format,
 	title,
 	options,
+	out,
 }: IDownloadVideoProps): void {
+	const outDir = outPath(out);
+
 	const loader = createLoader(`Downloading video: ${title}`);
 
 	const formatTitle = processString(title);

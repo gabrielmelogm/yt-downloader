@@ -1,13 +1,21 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const rootDir = path.resolve(__dirname, "..", "..");
-const outDir = path.join(rootDir, "out");
+const userProfile: string = process.env.USERPROFILE ?? "";
 
-export function outPath(): string {
-	if (!fs.existsSync(outDir)) {
-		fs.mkdirSync(outDir, { recursive: true });
+const defaultPath = path.join(userProfile, "Videos");
+
+export function outPath(userInputPath?: string): string {
+	let outPath = defaultPath;
+
+	if (userInputPath) {
+		const resolveUserInputPath = path.resolve(userInputPath);
+		outPath = resolveUserInputPath;
 	}
 
-	return outDir;
+	if (!fs.existsSync(outPath)) {
+		fs.mkdirSync(outPath, { recursive: true });
+	}
+
+	return outPath;
 }
