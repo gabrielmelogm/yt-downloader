@@ -6,7 +6,8 @@
   "scripts": {
     "yt": "tsc && node ./dist/yt.js",
     "yt:dev": "ts-node src/yt.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "yt": "./dist/yt.js"
