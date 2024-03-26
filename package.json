@@ -2,6 +2,9 @@
   "name": "@gabrielmelogm/yt-downloader",
   "version": "1.0.0",
   "description": "An downloader cli for youtube",
+  "repository": {
+    "url": "https://github.com/gabrielmelogm/yt-downloader"
+  },
   "main": "index.js",
   "scripts": {
     "yt": "tsc && node ./dist/yt.js",
