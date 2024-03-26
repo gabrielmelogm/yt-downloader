@@ -17,6 +17,7 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
+    "@inquirer/prompts": "^4.3.0",
     "@inquirer/select": "^2.2.0",
     "cli-spinners": "^2.9.2",
     "commander": "^12.0.0",

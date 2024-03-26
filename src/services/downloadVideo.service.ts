@@ -20,7 +20,7 @@ interface IDownloadVideoProps {
 
 export function downloadVideo({
 	url,
-	format,
+	format = "mp4",
 	title,
 	options,
 	out,
