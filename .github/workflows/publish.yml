@@ -18,6 +18,12 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install only prod dependencies
+        run: npm ci
+
       - name: Authenticate with npm
         run: echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > ~/.npmrc
         env:
