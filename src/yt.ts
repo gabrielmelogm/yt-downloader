@@ -4,7 +4,7 @@ import { program } from "commander";
 import { downloadCommand } from "./commands/download.command";
 import { stepForStep } from "./commands/step-for-step.command";
 
-program.version("0.0.1");
+program.version("1.0.0");
 
 program.action(stepForStep);
 

@@ -1,7 +1,7 @@
 {
-  "name": "yt-downloader",
+  "name": "@gabrielmelogm/yt-downloader",
   "version": "1.0.0",
-  "description": "",
+  "description": "An downloader cli for youtube",
   "main": "index.js",
   "scripts": {
     "yt": "tsc && node ./dist/yt.js",
@@ -11,8 +11,8 @@
   "bin": {
     "yt": "./dist/yt.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["youtube-downloader"],
+  "author": "Gabriel Melo <melogoncalvesbiel@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.6.1",
