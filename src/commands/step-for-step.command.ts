@@ -1,9 +1,20 @@
 import { input, select } from "@inquirer/prompts";
+import figlet from "figlet";
 import { getErrorMap, z } from "zod";
 import { downloadVideo } from "../services/downloadVideo.service";
 import { getVideoInfo } from "../services/getVideoInfo.service";
 
 export const stepForStep = async () => {
+	await figlet("YTCLI Downloader", (err, data) => {
+		if (err) {
+			console.log("Something went wrong...");
+			console.dir(err);
+			return;
+		}
+		console.log(data);
+		console.log("\n \n \n");
+	});
+
 	try {
 		const url = await input({ message: "Enter your url video: " });
 

@@ -17,6 +17,9 @@ dependencies:
   commander:
     specifier: ^12.0.0
     version: 12.0.0
+  figlet:
+    specifier: ^1.7.0
+    version: 1.7.0
   ytdl-core:
     specifier: ^4.11.5
     version: 4.11.5
@@ -28,6 +31,9 @@ devDependencies:
   '@biomejs/biome':
     specifier: 1.6.1
     version: 1.6.1
+  '@types/figlet':
+    specifier: ^1.5.8
+    version: 1.5.8
   '@types/node':
     specifier: ^20.11.28
     version: 20.11.28
@@ -282,6 +288,10 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
+  /@types/figlet@1.5.8:
+    resolution: {integrity: sha512-G22AUvy4Tl95XLE7jmUM8s8mKcoz+Hr+Xm9W90gJsppJq9f9tHvOGkrpn4gRX0q/cLtBdNkWtWCKDg2UDZoZvQ==}
+    dev: true
+
   /@types/mute-stream@0.0.4:
     resolution: {integrity: sha512-CPM9nzrCPPJHQNA9keH9CVkVI+WR5kMa+7XEs5jcGQ0VoAGnLv242w8lIVgwAEfmE4oufJRaTc9PNLQl0ioAow==}
     dependencies:
@@ -394,6 +404,12 @@ packages:
       chardet: 0.7.0
       iconv-lite: 0.4.24
       tmp: 0.0.33
+    dev: false
+
+  /figlet@1.7.0:
+    resolution: {integrity: sha512-gO8l3wvqo0V7wEFLXPbkX83b7MVjRrk1oRLfYlZXol8nEpb/ON9pcKLI4qpBv5YtOTfrINtqb7b40iYY2FTWFg==}
+    engines: {node: '>= 0.4.0'}
+    hasBin: true
     dev: false
 
   /figures@3.2.0:
