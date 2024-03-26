@@ -1,6 +1,6 @@
 {
   "name": "@gabrielmelogm/yt-downloader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An downloader cli for youtube",
   "repository": {
     "type": "git",
@@ -16,7 +16,9 @@
   "bin": {
     "yt": "./dist/yt.js"
   },
-  "keywords": ["youtube-downloader"],
+  "keywords": [
+    "youtube-downloader"
+  ],
   "author": "Gabriel Melo <melogoncalvesbiel@gmail.com>",
   "license": "ISC",
   "devDependencies": {
